@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 2</title>
+    <p id = "demo"></p>
+    <script> // date format Monday, 25 January 2016 | 15:12:52
+    var myVar = setInterval(updateTime, 1000);
+
+    function updateTime(){
+        var d = new Date();
+        var months = ["January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"];
+        var days = ["Monday","Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+        var m = months[d.getMonth()];
+        var day = days[d.getDay()];
+        var d2 = d.getDate();
+        var y = d.getFullYear();
+        var hour = d.getHours();
+        var minute = d.getMinutes();
+        var sec = d.getSeconds();
+        var time = hour + ":" +minute + ":" +sec
+        var result = day +", " + d2 + " " + m + " " + y + " | " + time  ;
+        document.getElementById("demo").innerHTML = result ;
+    }
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
