@@ -1,13 +1,24 @@
 <html>
 <head>
-  <title>Real-Time 3D Graphics with WebGL2</title>
+  <title>Question 1</title>
   <link rel="shortcut icon" type="image/png" href="/common/images/favicon.png" />
+  <h1>Find the area of a circle.</h1>
 
-  <style type="text/css">
-    canvas {
-      border: 5px dotted blue;
+  <input type="number" id ="myNumber" value="0" >
+  <button onclick="areaCircle()">Try it</button>
+
+  <p id ="demo"></p>
+  <script>
+
+    function areaCircle(){
+      var x = document.getElementById("myNumber").value;
+      var area = 3.14 * (x**2);
+      document.getElementById("demo").innerHTML = area;
+
     }
-  </style>
+
+  </script>
+
 </head>
 <body>
 
