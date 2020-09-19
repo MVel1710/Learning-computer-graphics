@@ -2,10 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Find the area of a Circle.</title>
+    <input type="number" id="radius" onkeypress="area()">
     <script>
         function area(){
-            
+            var r = document.getElementById("radius").value;
+            var ar = 3.14 * (r**2);
+            console.log(ar);
+
         }
     </script>
 </head>
