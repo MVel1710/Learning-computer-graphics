@@ -1,0 +1,24 @@
+
+
+
+    <script type="text/javascript"> // opening tag for JS script
+        'use strict';   // indicates code should be run in strict mode
+        function init() {   //Declaring init function for later use
+            const canvas = document.getElementById('webgl-canvas'); //declares the canvas as a constant that cannot be reassigned later. Get element method returns the element with the name "webgl-canvas".
+            // Ensure we have a canvas
+            if (!canvas) {  // Tests to see if we  have a canvas.
+                console.error('Sorry! No HTML5 Canvas was found on this page'); //Error code if we don't have a canvas.
+                return; // returns default undefined value
+            }
+            const gl = canvas.getContext('webgl2');
+            // Ensure we have a context
+            const message = gl //conditional  operator evaluated as 'condition? iftrue : ifFalse
+                ? 'Hooray! You got a WebGL2 context' // Evaluated expressions if the condition is true
+                : 'Sorry! WebGL is not available';  //evaluated expression if the condition is false
+            alert(message); //displays 1 of the alert message  from const message.
+        }
+        // Call init once the document has loaded
+        window.onload= init; // assigns the value of init function to the onload of the window object.
+    </script>   //Closing  tag
+
+
