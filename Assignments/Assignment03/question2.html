@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Question 2</title>
+    <style type="text/css">
+    </style>
+</head>
+
+<body onLoad = "init();">
+<div style = "text-align:center">
+    <canvas id="myCanvas" width="300" height="300">
+    </canvas>
+</div>
+</body>
+</html>
+
+<script type="text/javascript">
+    var context;
+    var dx= Math.random();
+    var dy= Math.random();
+    var y=150;
+    var x=10;
+    function drawCircle(){
+        context = myCanvas.getContext('2d');
+
+        context.clearRect(0,0,myCanvas.width,myCanvas.height); // clears circle so only one is drawn
+        context.beginPath();
+        context.fillStyle="#00ffe1"; // ball color
+        context.arc(x,y,25,0,Math.PI*2,true);
+        context.closePath();
+        context.fill();
+
+        if( x<0 || x > myCanvas.width - 30) // when ball hits edge return
+            dx=-dx;
+
+        if( y<0 || y > myCanvas.height - 30) // when ball hits edge return
+            dy=-dy;
+        x+=dx;
+        y+=dy;
+    }
+    setInterval(drawCircle, 10); //draws animation every 1000ms or 1 sec
+</script>
